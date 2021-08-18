@@ -1,6 +1,92 @@
+::::::::::::::::::: kyu5
+
+Where my anagrams at?
+
+What is an anagram? Well, two words are anagrams of each other if they both contain the same letters. For example:
+
+'abba' & 'baab' == true
+
+'abba' & 'bbaa' == true
+
+'abba' & 'abbba' == false
+
+'abba' & 'abca' == false
+
+Write a function that will find all the anagrams of a word from a list. You will be given two inputs a word and an array with words. You should return an array of all the anagrams or an empty array if there are none. For example:
+
+anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) => ['aabb', 'bbaa']
+
+anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']
+
+anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
+
+Note for Go
+For Go: Empty string slice is expected when there are no anagrams found.
+
+
+https://www.codewars.com/kata/523a86aa4230ebb5420001e1/train/javascript/60b7ae5c8e8d6200553eff2e
+
 :::::::::::::::::::: kyu6
 
+Roman Numerals Encoder
 
+Create a function taking a positive integer as its parameter and returning a string containing the Roman Numeral representation of that integer.
+
+Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.
+
+https://www.codewars.com/kata/51b62bf6a9c58071c600001b/train/javascript/61137c270e51db00515a1afe
+
+
+Take a Ten Minute Walk
+
+You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+
+https://www.codewars.com/kata/54da539698b8a2ad76000228/train/javascript/60f929148b940b0045f23d2a
+
+
+Convert string to camel case
+
+Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). 
+
+https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript/60f7d786ca1ef900492f52aa
+
+
+Array.diff
+
+Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b keeping their order...
+
+https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript/60f686f3d02629001a13b6da
+
+
+HTML dynamic color string generation
+
+Generate a valid randomly generated hexadecimal color string. Assume all of them always have 6 digits.
+
+https://www.codewars.com/kata/56f1c6034d0c330e4a001059/train/javascript/60ebfeb7756e37000e902955
+
+
+Persistent Bugger.
+
+Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript/60b8fbb95e6e130040acda7a
+
+
+Unique In Order
+
+Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements
+
+https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript/60b6586aa388ae00192faa68
+
+Detect Pangram
+
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript/60b52c54af163a0049aba026
 
 :::::::::::::::::::: kyu7
 
