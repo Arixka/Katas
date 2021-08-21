@@ -1,43 +1,56 @@
-//Ordenacion combinada, divide el array recursivamente, primero dividimos el array a la mitad hasta obtener una subcadena de un elemento. Ahora uniremos cada subarray ordenada hasta tener un array final ordenado
+//metodo de ordenamiento externo y estable, divide el array en dos , ordena el lado izq, y luego el lado derecho y las une
 
-let arr = [1, 33, 5, 16, 11, 44, 81, 7, 136]
-//sort arr
-const mergeArray = (left, right)=>{
- const res = []
- let leftIndex = 0
- let rightIndex = 0
+const arr = [1, 4, 12, 8, 345, 123, 43, 32, 5643, 63, 123, 439, 2, 55, 17, 234, 92]
 
- while(leftIndex < left.lenght && rightIndex < right.lenght){
-   console.log(leftIndex, rightIndex)
-  let leftElem = left[leftIndex]
-  let rightElem = right[rightIndex]
+//unifica
+const mergeArray = (arrLeft, arrRight) => {
+	let result = []
 
+	while (arrLeft.length && arrRight.length) {
 
-  if(leftElem < rightElem){
-    res.push(leftElem)
-    leftIndex++
-  }else{
-    res.push(rightElem)
-    rightIndex++
-  }
+		if (arrLeft[0] <= arrRight[0]) {
+			result.push(arrLeft.shift())
+		} else {
+			result.push(arrRight.shift())
+		}
+		
+	}
 
- }
+	result = result.concat(arrLeft).concat(arrRight)
 
- return [...res,...left.slice(leftIndex),...right.slice(rightIndex)]
+	return result
 }
+//divide
+const mergeSort = arr => {
+	if (arr.length < 2) {
+		return arr
+	}
 
-//recursive
-const mergeSort = (arr) =>{
-  console.log(arr)
-if(arr.length<=1) {
-  return arr
-}
+	let middle = Math.floor(arr.length / 2)
 
-let mid = Math.floor(arr.length / 2)
-let left = arr.slice(0, mid)
-let right = arr.slice(mid)
+	let arrLeft = arr.slice(0, middle)
+	let arrRight = arr.slice(middle)
 
-  return mergeArray(mergeSort(left),mergeSort(right))
+	return mergeArray(mergeSort(arrLeft), mergeSort(arrRight))
 }
 
 console.log(mergeSort(arr))
+
+/**
+ MergeSort
+  miramos primero si el array se puede dividir
+  sacamos middle, la mitad del length del array 
+  dividimos el array en dos 
+  volvemos a llamar a mergesort
+ 
+
+  MergeArray
+    creamos un array vacio
+    comprobamos si cualquiera de los arrays estan vacios
+    buscamos el valor mas pequeño 
+      añadimos el valor izquierda 
+      añadimos el valor derecho 
+    hacemos merge del array izquierdo
+    hacemos merge del array derecho
+    return result
+ */
