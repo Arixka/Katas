@@ -1,4 +1,11 @@
 ::::::::::::::::::: kyu5
+MergeSort "merge" function
+
+In this excercise, we will implement the "merge" function from MergeSort.
+
+MergeSort is often taught in Computer Science as the canonical example of the "Divide and Conquer" algorithm. The strategy of MergeSort is both simple and profound, leveraging two simple-to-prove mathematical facts (1. That every list of 1 element is "sorted" ... and 2. It is much easier to combine two already-sorted lists into 1 sorted list than it is to sort a big list all at once) to yield an algorithm with a worst-case complexity of O(n log n).
+
+https://www.codewars.com/kata/52336a4436e0b095d8000093/train/javascript/6120e1ba27e722000e724827
 
 Where my anagrams at?
 

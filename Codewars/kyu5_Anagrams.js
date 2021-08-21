@@ -1,3 +1,4 @@
+
 function anagrams(word, words) {
   const arrW = word.split('').sort().join('')
   let arrNew =[]
@@ -11,3 +12,4 @@ function anagrams(word, words) {
 
 console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada'])) // ['aabb', 'bbaa']
 console.log(anagrams('laser', ['lazing', 'lazy',  'lacer'])) // []
+
