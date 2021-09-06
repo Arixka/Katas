@@ -1,50 +1,50 @@
  
  //SUMAR ELEMENTOS DE UN ARRAY, TENIENDO SOLO UN MIN Y MAX
-function sumAll(arr) {
-let cont=0
-let max=0
-let min=0
-if(arr[0]>arr[1]){
-max=arr[0]
-min=arr[1]
-}else{
-  min=arr[0]
-  max=arr[1]
-}
-  for(var i=min; i<=max; i++){
-    cont += i
-  }
-  return cont;
-}
-sumAll([10, 5])
-//sumAll([1, 4]);
-//SEEK AND DESTROY
-function destroyer(arr) {
-  var arg =[...arguments]
-  return arr.filter(item=> {
-    console.log(!arg.includes(item))
-    return !arg.includes(item);
-    //compara todos los elementos y devuelve los q no se han repetido
-  });
-}
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);//[1, 1]
-//destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) // [1, 5, 1].
-//COMPARAR DOS ARRAYS Y SACAR EL ELEMENTO DIFERENTE
-function diffArray(arr1, arr2) {
-  var newArr = [];
-  for (let i = 0; i < arr2.length; i++) {
-    if(arr1.indexOf(arr2[i]) == -1) {
-      newArr.push(arr2[i]);
-    } 
-  }
-    for (let j = 0; j < arr1.length; j++) {
-    if(arr2.indexOf(arr1[j]) == -1) {
-      newArr.push(arr1[j]);
-    } 
-  }
+// function sumAll(arr) {
+// let cont=0
+// let max=0
+// let min=0
+// if(arr[0]>arr[1]){
+// max=arr[0]
+// min=arr[1]
+// }else{
+//   min=arr[0]
+//   max=arr[1]
+// }
+//   for(var i=min; i<=max; i++){
+//     cont += i
+//   }
+//   return cont;
+// }
+// sumAll([10, 5])
+// //sumAll([1, 4]);
+// //SEEK AND DESTROY
+// function destroyer(arr) {
+//   var arg =[...arguments]
+//   return arr.filter(item=> {
+//     console.log(!arg.includes(item))
+//     return !arg.includes(item);
+//     //compara todos los elementos y devuelve los q no se han repetido
+//   });
+// }
+// destroyer([1, 2, 3, 1, 2, 3], 2, 3);//[1, 1]
+// //destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) // [1, 5, 1].
+// //COMPARAR DOS ARRAYS Y SACAR EL ELEMENTO DIFERENTE
+// function diffArray(arr1, arr2) {
+//   var newArr = [];
+//   for (let i = 0; i < arr2.length; i++) {
+//     if(arr1.indexOf(arr2[i]) == -1) {
+//       newArr.push(arr2[i]);
+//     } 
+//   }
+//     for (let j = 0; j < arr1.length; j++) {
+//     if(arr2.indexOf(arr1[j]) == -1) {
+//       newArr.push(arr1[j]);
+//     } 
+//   }
 
-  return newArr;
-} 
+//   return newArr;
+// } 
 //USO DE ARGUMENTS ELIMINAR DE UN ARRAY EL RESTO DE PARAMETROS QUE ENTREN COMO PARAMETRO A LA FUNCION
 function destroyer(arr, ...params) {
  return arr.filter(elem => !params.includes(elem));
@@ -227,26 +227,26 @@ let str2=str.split('')
 }
 
 
-convertHTML("Dolce & Gabbana");//Dolce &amp; Gabbana
-//convertHTML("Hamburgers < Pizza < Tacos") // Hamburgers &lt; Pizza &lt; Tacos.
-//convertHTML("Sixty > twelve") // Sixty &gt; twelve.
+// convertHTML("Dolce & Gabbana");//Dolce &amp; Gabbana
+// //convertHTML("Hamburgers < Pizza < Tacos") // Hamburgers &lt; Pizza &lt; Tacos.
+// //convertHTML("Sixty > twelve") // Sixty &gt; twelve.
 
-//FIBONACI SUMA IMPARES
-function sumFibs(num) {
-let num1=1 //previo
-let num2=1 //anterior a ese
-let sum = num1+num2
-while ((num1+num2) <= num) {  
-   let fib=num1+num2
-   if (fib % 2 !==0) {//resto distinto de cero 
+// //FIBONACI SUMA IMPARES
+// function sumFibs(num) {
+// let num1=1 //previo
+// let num2=1 //anterior a ese
+// let sum = num1+num2
+// while ((num1+num2) <= num) {  
+//    let fib=num1+num2
+//    if (fib % 2 !==0) {//resto distinto de cero 
     
-    sum += fib
-   }
-   num2=num1// al anterior le pasamos el valor del previo //1,1,2,3,5,8,13
-   num1=fib //al previo le damos el valor del fib
-}
-return sum
-}
+//     sum += fib
+//    }
+//    num2=num1// al anterior le pasamos el valor del previo //1,1,2,3,5,8,13
+//    num1=fib //al previo le damos el valor del fib
+// }
+// return sum
+// }
 //1,1,2,3,5,8,13... suma de los numeros impares <=num
 //sumFibs(4);// 1, 1, 3 === return 5
 sumFibs(1000) // 1785.
